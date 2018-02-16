@@ -9,7 +9,7 @@
       </div>
       <div class="form-group">
         <%= label_tag :borough%>
-        <%= text_field_tag :borough, params[:borough], class:"form-control" %>
+        <%= select_tag :borough, options_for_select(["Manhattan", "Queens", "Brooklyn", "Staten Island", "Bronx"]), default: params[:borough], class:"form-control" %>
       </div>
       <% if !params[:address] %>
         <%= submit_tag "Submit", class:"btn btn-primary" %>
